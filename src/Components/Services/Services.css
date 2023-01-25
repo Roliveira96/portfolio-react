@@ -1,7 +1,7 @@
 .services {
     padding: 0 3rem 0 3rem;
     display: flex;
-    height: 90vh;
+    height: 50vh;
     margin-top: 9rem;
     margin-bottom: 13rem;
 }
@@ -18,7 +18,7 @@
 }
 
 .awesome > :nth-child(2) {
-    color: var(--orange);
+    color: var(--primery-color);
     font-size: 2.5rem;
     font-weight: bold;
 }
@@ -34,4 +34,34 @@
     height: 2rem;
     margin-top: 1rem;
 
+}
+.cards{
+    position: relative;
+}
+.cards>*{
+    position: absolute;
+}
+
+@media screen and (max-width: 480px) {
+    .services{
+        margin-top: 0;
+        flex-direction: column;
+        gap: 5rem;
+        height: 66rem;
+        padding: 0;
+    }
+    .cards {
+        height: 33rem;
+        justify-content: space-between;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        gap: 12rem;
+    }
+    .cards>*{
+        position: static;
+    }
 }
